@@ -21,6 +21,9 @@ struct BarView: View{
     // How rounded the corner of the bar should be (higher is more rounded)
     var cornerRadius: CGFloat
     
+    // Control speed of animation
+    var animationSpeed = 2.0
+    
     var body: some View {
         
         VStack {
@@ -36,7 +39,7 @@ struct BarView: View{
                 RoundedRectangle(cornerRadius: cornerRadius)
                     .frame(width: 30, height: currentValue)
                     .foregroundColor(.green)
-                    .animation(.easeIn(duration: 2.0))
+                    .animation(.easeIn(duration: animationSpeed))
                 
             }
             .padding(.bottom, 8)
@@ -51,7 +54,7 @@ struct BarView: View{
 struct BarView_Previews: PreviewProvider {
     static var previews: some View {
     
-        BarView(valueToIllustrate: 100, cornerRadius: 10)
+        BarView(valueToIllustrate: 100, cornerRadius: 10, animationSpeed: 2.0)
         
     }
 }
