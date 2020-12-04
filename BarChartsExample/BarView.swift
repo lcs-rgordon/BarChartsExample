@@ -36,12 +36,12 @@ struct BarView: View{
 
             ZStack (alignment: .leading) {
         
-                // Background, fixed height of 200 points
+                // Background, fixed length of 200 points
                 RoundedRectangle(cornerRadius: cornerRadius)
                     .frame(width: 200, height: 30)
                     .foregroundColor(.black)
                 
-                // The height of the bar, a given value
+                // The length of the bar, based upon the value to illustrate
                 RoundedRectangle(cornerRadius: cornerRadius)
                     .frame(width: currentValue, height: 30)
                     .foregroundColor(.green)
