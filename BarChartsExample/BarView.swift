@@ -10,7 +10,7 @@
 
 import SwiftUI
 
-struct BarView: View{
+struct BarView: View {
 
     // Starting value
     @State private var currentValue: CGFloat = 0.0
