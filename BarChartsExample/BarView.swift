@@ -24,6 +24,9 @@ struct BarView: View{
     // Control speed of animation
     var animationSpeed = 2.0
     
+    // The label for the value
+    var label = ""
+    
     var body: some View {
         
         VStack {
@@ -46,6 +49,10 @@ struct BarView: View{
             .onAppear() {
                 currentValue = valueToIllustrate
             }
+            
+            Text(label)
+                .rotationEffect(.degrees(-90))
+                .padding(.top)
         }
         
     }
@@ -54,7 +61,7 @@ struct BarView: View{
 struct BarView_Previews: PreviewProvider {
     static var previews: some View {
     
-        BarView(valueToIllustrate: 100, cornerRadius: 10, animationSpeed: 2.0)
+        BarView(valueToIllustrate: 100, cornerRadius: 10, animationSpeed: 2.0, label: "Travel")
         
     }
 }
