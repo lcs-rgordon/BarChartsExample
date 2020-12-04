@@ -56,10 +56,10 @@
 			children = (
 				0E780E9B257AC47200B4EE87 /* BarChartsExampleApp.swift */,
 				0E780E9D257AC47200B4EE87 /* ContentView.swift */,
+				0E780EAB257AC4D200B4EE87 /* BarView.swift */,
 				0E780E9F257AC47500B4EE87 /* Assets.xcassets */,
 				0E780EA4257AC47500B4EE87 /* Info.plist */,
 				0E780EA1257AC47500B4EE87 /* Preview Content */,
-				0E780EAB257AC4D200B4EE87 /* BarView.swift */,
 			);
 			path = BarChartsExample;
 			sourceTree = "<group>";

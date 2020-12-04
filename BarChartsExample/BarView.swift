@@ -29,18 +29,21 @@ struct BarView: View{
     
     var body: some View {
         
-        VStack {
+        HStack(alignment: .center) {
 
-            ZStack (alignment: .bottom) {
+            Text(label)
+                .padding(.bottom, 10)
+
+            ZStack (alignment: .leading) {
         
                 // Background, fixed height of 200 points
                 RoundedRectangle(cornerRadius: cornerRadius)
-                    .frame(width: 30, height: 200)
+                    .frame(width: 200, height: 30)
                     .foregroundColor(.black)
                 
                 // The height of the bar, a given value
                 RoundedRectangle(cornerRadius: cornerRadius)
-                    .frame(width: 30, height: currentValue)
+                    .frame(width: currentValue, height: 30)
                     .foregroundColor(.green)
                     .animation(.easeIn(duration: animationSpeed))
                 
@@ -49,11 +52,9 @@ struct BarView: View{
             .onAppear() {
                 currentValue = valueToIllustrate
             }
-            
-            Text(label)
-                .rotationEffect(.degrees(-90))
-                .padding(.top)
+
         }
+        
         
     }
 }
@@ -61,7 +62,7 @@ struct BarView: View{
 struct BarView_Previews: PreviewProvider {
     static var previews: some View {
     
-        BarView(valueToIllustrate: 100, cornerRadius: 10, animationSpeed: 2.0, label: "Travel")
+        BarView(valueToIllustrate: 100, cornerRadius: 10, animationSpeed: 2.0, label: "Recreation")
         
     }
 }
